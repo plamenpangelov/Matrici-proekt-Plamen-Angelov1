@@ -12,12 +12,11 @@
 //  o	да се извежда грешка, ако матрицата няма обратна
 //•	проверка дали дадена квадратна матрица може да се преобразува до единичната  (E)
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     // Function to print Matrix
-    static void print_matrix(int output[][], int r, int c) {
+    static void printMatrix(int output[][], int r, int c) {
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
                 System.out.print(output[i][j] + " ");
@@ -27,7 +26,7 @@ public class Main {
     }
 
     // Function to multiply two matrices a[][] and b[][]
-    static void multiply(int r1, int c1, int r2, int c2, int a[][], int b[][]) {
+    static void multiplyMatrix(int r1, int c1, int r2, int c2, int a[][], int b[][]) {
         int i, j, k;
         // Check if multiplication is Possible
         if (r2 != c1) {
@@ -45,7 +44,7 @@ public class Main {
                 }
             }
         }
-        print_matrix(c, r1, c2);
+        printMatrix(c, r1, c2);
     }
 
     public static void main(String[] args) {
@@ -128,7 +127,7 @@ public class Main {
                 b[i][j] = inp.nextInt();
             }
         }
-        multiply(r1, c1, r2, c2, a, b);
+        multiplyMatrix(r1, c1, r2, c2, a, b);
     }
 }
 
